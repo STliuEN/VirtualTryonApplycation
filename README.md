@@ -2,7 +2,7 @@
 
 一个VITON试穿项目的整合模型，将几个图像处理的过程缝合在了一起，用于完成课设，运行在windows平台上，本质上只是一个简单的应用，不具备可移植性。
 
-运用了[Openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose/tree/master)的Windows平台演示demo用来生成骨架模型和[Graphonomy](https://github.com/Gaoyiminggithub/Graphonomy?tab=readme-ov-file)分类器对输入的图片进行处理。
+运用了[Openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose/tree/master)的Windows平台演示demo用来生成骨架模型和[Graphonomy](https://github.com/Gaoyiminggithub/Graphonomy?tab=readme-ov-file)分类器对输入的图片进行处理，最后使用[VITON-HD](https://github.com/shadow2496/VITON-HD)模型进行虚拟试衣
 
 # 事先准备
 
