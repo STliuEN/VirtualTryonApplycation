@@ -93,7 +93,7 @@ if __name__ == "__main__":
     parser.add_argument('--colored_background', default=1, type=int, help="Using colored background")
     parser.add_argument('--background_rgb', nargs=3, type=int, default=[255, 255, 255], help="RGB values for background color")
     parser.add_argument('--cleaning_temp_folder',default=0, type=int,help="Cleaning temp folders")
-
+    parser.add_argument('--using_aliyun_API',default=0, type=int,help="using_aliyun_API")
 
     args = parser.parse_args()
 
@@ -107,6 +107,7 @@ if __name__ == "__main__":
     color_background=args.colored_background
     background_rgb = args.background_rgb
     cleaning_temp_folder=args.cleaning_temp_folder
+    using_aliyun_API=args.using_aliyun_API
 
     start_script_time = time.time()  
     
@@ -157,7 +158,7 @@ if __name__ == "__main__":
     mask_model=0
 
     if(mask_model==0):
-        create_clothing_mask("./datasets/cloth/resized_CLOTH.jpg", "./datasets/cloth-mask/resized_CLOTH.jpg",1)
+        create_clothing_mask("./datasets/cloth/resized_CLOTH.jpg", "./datasets/cloth-mask/resized_CLOTH.jpg",using_aliyun_API)
         
     elif(mask_model==1):
         color_print("testing dataset's cloth mask","yellow")
@@ -165,7 +166,7 @@ if __name__ == "__main__":
     if os.path.isfile("./IOfolder/original_IMG.jpg"):
         os.remove("./IOfolder/original_IMG.jpg")
 
-    remove_background("./datasets/image/original_IMG.jpg","./datasets/image/resized_IMG.jpg",1)
+    remove_background("./datasets/image/original_IMG.jpg","./datasets/image/resized_IMG.jpg",using_aliyun_API)
 
 
 
@@ -252,7 +253,7 @@ if __name__ == "__main__":
             subprocess.run(["python", "./test.py", "--name","resized_IMG"], check=True)
             
 
-            if(color_background==1):
+            if(color_background==1 and using_aliyun_API==1):
                 bgR, bgG, bgB = background_rgb
 
                 colorize_background("./results/resized_IMG/resized_resized_CLOTH.jpg",
