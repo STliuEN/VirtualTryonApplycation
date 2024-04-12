@@ -257,7 +257,7 @@ if __name__ == "__main__":
                 bgR, bgG, bgB = background_rgb
 
                 colorize_background("./results/resized_IMG/resized_resized_CLOTH.jpg",
-                                    "./results/resized_IMG/coloredbackground_CLOTH.jpg",
+                                    "./results/resized_IMG/coloredbackground_CLOTH.png",
                                     (bgR,bgG,bgB))
                 print("background has been colored.")
 
@@ -268,7 +268,7 @@ if __name__ == "__main__":
                 if color_background==0:
                     source_file_path = f"./results/resized_IMG/resized_resized_CLOTH.jpg"
                 elif color_background==1:
-                    source_file_path = f"./results/resized_IMG/coloredbackground_CLOTH.jpg"
+                    source_file_path = f"./results/resized_IMG/coloredbackground_CLOTH.png"
                 
                 # 构建目标文件路径
                 target_file_path = os.path.join(output_path, output_name)

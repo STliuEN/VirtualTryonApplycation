@@ -31,6 +31,7 @@ request = SegmentBodyAdvanceRequest()
 
 
 def colorize_background(input_image_path, output_image_path, background_color):
+    # 读取输入图像文件
     stream = open(input_image_path, 'rb')
     request.image_urlobject = stream
     request.return_form = 'crop'
@@ -45,25 +46,29 @@ def colorize_background(input_image_path, output_image_path, background_color):
             # 使用PIL读取去背后的图片
             image_data = response.content
             image = Image.open(io.BytesIO(image_data)).convert("RGBA")
-            
+
             # 计算目标尺寸和图像尺寸的比例因子，保持纵横比不变
             target_size = (768, 1024)
             ratio = min(target_size[0] / image.width, target_size[1] / image.height)
             new_size = (int(image.width * ratio), int(image.height * ratio))
+            
             # 按比例缩放图像
             resized_image = image.resize(new_size, Image.ANTIALIAS)
             
-            # 创建一个指定大小的纯色背景
-            background = Image.new("RGBA", target_size, background_color + (255,))
+            # 创建一个指定大小的背景（默认透明）
+            background = Image.new("RGBA", target_size, (0, 0, 0, 0))  # 使用透明背景
             
-            # 将缩放后的图片放在纯色背景中间
+            if background_color != (256, 256, 256):  # 非特殊颜色处理
+                background = Image.new("RGBA", target_size, background_color + (255,))  # 使用指定的非透明背景颜色
+
+            # 将缩放后的图片放在背景中间
             x = (target_size[0] - resized_image.width) // 2
             y = (target_size[1] - resized_image.height) // 2
             background.paste(resized_image, (x, y), resized_image)  # 使用resized_image作为mask以保持透明度
             
             # 保存合成后的图片
             background.save(output_image_path, "PNG")
-            print(f"Image with colorized background saved successfully to: {output_image_path}")
+            print(f"Image saved successfully to: {output_image_path}")
         else:
             print(f"Failed to download image from URL: {imageurl}")
 
@@ -73,6 +78,4 @@ def colorize_background(input_image_path, output_image_path, background_color):
             print(error.code)
 
 # Example usage:
-#colorize_background("./results/resized_IMG/resized_resized_CLOTH.jpg", "./results/resized_IMG/coloredbackground_CLOTH.jpg", (139, 137, 137))
-
-
+colorize_background("./testpath.jpg", "./testpathH.png", (256, 256, 256))
