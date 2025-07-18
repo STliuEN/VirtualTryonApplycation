@@ -4,6 +4,8 @@
 
 运用了[Openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose/tree/master)的Windows平台演示demo用来生成骨架模型和[Graphonomy](https://github.com/Gaoyiminggithub/Graphonomy?tab=readme-ov-file)分类器对输入的图片进行处理，最后使用[VITON-HD](https://github.com/shadow2496/VITON-HD)模型进行虚拟试衣
 
+[点击观看demo](https://github.com/user-attachments/assets/587f280d-50de-46cd-ad81-a374ab19636b)
+
 # 使用方法
 
 1、项目构建时使用了Openpose项目，直接采用了openpose的windows演示版本[openpose-windowsdemo](https://github.com/CMU-Perceptual-Computing-Lab/openpose/blob/master/doc/installation/0_index.md#windows-portable-demo),具体使用方法是下载一整个openpose的windows演示项目然后解压到./文件夹中，方便撰写的脚本直接调用。
