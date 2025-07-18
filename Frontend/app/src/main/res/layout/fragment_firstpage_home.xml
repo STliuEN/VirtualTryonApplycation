@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/p1"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/zhutise"
+        app:navigationIcon="@mipmap/logo2"
+        app:titleTextColor="@color/black"
+        app:titleMarginStart="100dp"
+        />
+
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager_FirstPage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="1dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView_RealFirst"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_margin="1dp"
+        />
+
+
+</LinearLayout>

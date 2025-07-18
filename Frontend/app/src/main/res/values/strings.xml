@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">APP_FittingRoom</string>
+    <string name="title_first">首页</string>
+    <string name="title_second">试衣间</string>
+    <string name="title_third">我的</string>
+</resources>

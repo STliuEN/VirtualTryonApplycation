@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    android:background="@drawable/backg"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <FrameLayout
+        android:id="@+id/viewPagerLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_viewPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="22dp"
+            android:text="关闭"
+            android:background="@drawable/buttonyuan"
+            />
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="76dp"
+
+            />
+    </FrameLayout>
+
+    <GridLayout
+        android:id="@+id/infoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:columnCount="2"
+        android:rowCount="13"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_height="80dp"
+            android:layout_width="400dp"
+            android:layout_row="0"
+            android:layout_rowSpan="1"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            />
+
+        <TextView
+            android:layout_height="50dp"
+            android:layout_width="200dp"
+            android:text="   头像"
+            android:layout_row="1"
+            android:layout_rowSpan="1"
+            android:layout_column="0"
+            android:layout_gravity="center"
+
+            android:layout_columnSpan="1"
+            />
+
+        <ImageView
+            android:id="@+id/imageView_head_load"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_row="1"
+            android:layout_rowSpan="1"
+            android:layout_column="1"
+            android:layout_columnSpan="1"
+            android:src="@drawable/pximap_head" />
+
+        <TextView
+            android:layout_height="50dp"
+            android:layout_width="200dp"
+            android:text="   用户名"
+
+            android:layout_row="2"
+            android:layout_rowSpan="1"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            />
+
+        <EditText
+            android:id="@+id/editText_username"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_row="2"
+            android:layout_rowSpan="1"
+            android:layout_column="1"
+            android:layout_columnSpan="1"
+            android:hint="点击输入用户名"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_height="50dp"
+            android:layout_width="200dp"
+            android:text="   姓名"
+            android:layout_row="3"
+            android:layout_rowSpan="1"
+
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_row="3"
+            android:layout_rowSpan="1"
+            android:layout_column="1"
+            android:layout_columnSpan="1"
+            android:layout_gravity="center"
+            android:hint="点击输入姓名" />
+        <TextView
+            android:layout_height="50dp"
+            android:layout_width="200dp"
+            android:text="   性别"
+            android:layout_row="4"
+            android:layout_rowSpan="1"
+
+
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_row="4"
+            android:layout_rowSpan="1"
+            android:layout_column="1"
+            android:layout_columnSpan="1"
+            android:hint="点击输入性别" />
+        <TextView
+            android:layout_height="50dp"
+            android:layout_width="200dp"
+            android:text="   年龄"
+            android:layout_row="5"
+
+            android:layout_rowSpan="1"
+
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_row="5"
+            android:layout_rowSpan="1"
+            android:layout_column="1"
+            android:layout_columnSpan="1"
+            android:hint="点击输入年龄" />
+        <TextView
+            android:layout_height="50dp"
+            android:layout_width="200dp"
+            android:text="   生日"
+
+            android:layout_row="6"
+            android:layout_rowSpan="1"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_row="6"
+            android:layout_rowSpan="1"
+            android:layout_column="1"
+            android:layout_columnSpan="1"
+            android:hint="点击输入生日" />
+        <TextView
+            android:layout_height="50dp"
+            android:layout_width="200dp"
+            android:text="   职业"
+            android:layout_row="7"
+
+            android:layout_rowSpan="1"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_row="7"
+            android:layout_rowSpan="1"
+            android:layout_column="1"
+            android:layout_columnSpan="1"
+            android:hint="点击输入职业" />
+        <TextView
+            android:layout_height="40dp"
+            android:layout_width="400dp"
+
+            android:text="   一句话的自我介绍"
+            android:layout_row="8"
+            android:layout_rowSpan="1"
+
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            />
+        <EditText
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_row="9"
+            android:layout_rowSpan="1"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:hint="  点击输入自我介绍" />
+
+
+        <TextView
+            android:layout_height="40dp"
+            android:layout_width="400dp"
+
+            android:layout_row="10"
+            android:layout_rowSpan="1"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            />
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_row="11"
+            android:layout_rowSpan="1"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="center"
+            android:text="保存"
+            android:background="@drawable/buttonyuan"/>
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+
+            android:layout_row="11"
+            android:layout_rowSpan="1"
+            android:layout_column="1"
+            android:layout_columnSpan="1"
+            android:text="取消"
+            android:background="@drawable/buttonyuan"/>
+
+
+    </GridLayout>
+
+
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="4dp">
+
+            <ImageView
+                android:id="@+id/imageView_head"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pximap_head" />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <TextView
+            android:id="@+id/textView_username"
+            android:layout_gravity = "center"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:text="user2563705562" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:layout_margin="8dp">
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="30dp">
+
+            <Button
+                android:id="@+id/btn_record"
+                android:text=""
+                android:layout_height="80dp"
+                android:layout_width="80dp"
+                android:textColor="#000000"
+                android:background="@android:color/transparent"
+                android:visibility="visible" />
+
+            <TextView
+                android:text="试穿记录"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:textColor="#000000"
+                android:drawableTop="@mipmap/cloth"
+                android:drawablePadding="10dp"
+                android:visibility="visible" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="35dp">
+
+            <Button
+                android:id="@+id/btn_collection"
+                android:text=""
+                android:layout_height="80dp"
+                android:layout_width="80dp"
+                android:textColor="#000000"
+                android:background="@android:color/transparent"
+                android:visibility="visible" />
+
+            <TextView
+                android:text="我的收藏"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:textColor="#000000"
+                android:drawableTop="@mipmap/star"
+                android:drawablePadding="10dp"
+                android:visibility="visible" />
+
+        </FrameLayout>
+
+
+
+        <FrameLayout
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="30dp">
+
+            <Button
+                android:id="@+id/btn_changeinfo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@android:color/transparent"
+                android:text=""
+                android:textColor="#000000"
+                android:visibility="visible" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center"
+                android:drawableTop="@mipmap/pen"
+                android:drawablePadding="10dp"
+                android:text="修改信息"
+                android:textColor="#000000"
+                android:visibility="visible" />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+
+
+
+
+        <Button
+            android:id="@+id/btn_support"
+            android:text="好 评 支 持"
+            android:layout_height="40dp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="3dp"
+            android:textStyle="bold"
+
+            android:background="@drawable/buttonyuan"
+            />
+
+        <Button
+            android:id="@+id/btn_suggest"
+            android:text="建 议 与 留 言"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/buttonyuan"
+            />
+
+        <Button
+            android:id="@+id/btn_clearcache"
+            android:text="清 理 缓 存"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/buttonyuan"
+            />
+        <Button
+            android:id="@+id/btn_normalquestion"
+            android:text="常 见 问 题"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/buttonyuan"
+            />
+
+        <Button
+            android:id="@+id/btn_checkagreement"
+            android:text="查 看 隐 私 协 议"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/buttonyuan"
+            />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:text="登 录 其 它 账 号"
+            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/buttonyuan"
+            />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+
